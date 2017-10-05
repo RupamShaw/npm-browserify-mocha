@@ -1,0 +1,19 @@
+{
+  "name": "nodemon.browserify.mocha",
+  "version": "1.0.0",
+  "description": "simple project to use npm nodemon for watching broweserify for minimize css  mocha chai for testing and sass minimizer",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RupamShaw/npm-browserify-mocha.git"
+  },
+  "author": "rupam <rupam.shaw@gmail.com>",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/RupamShaw/npm-browserify-mocha/issues"
+  },
+  "homepage": "https://github.com/RupamShaw/npm-browserify-mocha#readme"
+}
