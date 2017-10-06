@@ -1,5 +1,5 @@
 var assert = require('assert');
-var MyLib = require('./my_lib');
+var MyLib = require('../js/my_lib');
 var expect = require('chai').expect;
 
 //describe for grouping module
