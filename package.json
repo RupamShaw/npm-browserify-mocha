@@ -1,9 +1,14 @@
 {
   "name": "nodemon.browserify.mocha",
   "version": "1.0.0",
-  "description": "simple project to use npm nodemon for watching broweserify for minimize css  mocha chai for testing and sass minimizer",
+  "description": "simple project to use npm nodemon for watching broweserify for minimize js nodesass for css  mocha chai for testing and sass minimizer",
   "main": "index.js",
   "scripts": {
+    "build-css": "node-sass --include-path scss scss/main.scss build/css/style.min.css",
+    "build-js": "browserify js/hello.js > build/js/script.min.js",
+    "build": "npm run build-css && npm run build-js",
+    "server": "cd build && http-server",
+    "start": "nodemon -e js,scss -x \"npm run build && npm run server\" --ignore build/",
     "test": "mocha test.js"
   },
   "repository": {
@@ -15,5 +20,11 @@
   "bugs": {
     "url": "https://github.com/RupamShaw/npm-browserify-mocha/issues"
   },
-  "homepage": "https://github.com/RupamShaw/npm-browserify-mocha#readme"
+  "homepage": "https://github.com/RupamShaw/npm-browserify-mocha#readme",
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.5.3",
+    "nodemon": "^1.12.1"
+  }
 }
